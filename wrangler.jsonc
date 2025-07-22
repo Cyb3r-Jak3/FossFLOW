@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fossflow",
+  "compatibility_date": "2025-05-05",
+  "assets": {
+    // The path to the directory containing the `index.html` file to be served at `/`
+    "directory": "./build"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "build": {
+    "command": "pnpm run build",
+    "watch_dir": "./build"
+  },
+  "routes": [
+    {
+      "pattern": "fossflow.cyberjake.xyz",
+      "custom_domain": true
+    }
+  ]
+}
